@@ -25,6 +25,7 @@ while running:
             running = False
 
     #2 Update
+    player1.update()
 
     #3 Draw/render
     screen.fill(BLACK)
