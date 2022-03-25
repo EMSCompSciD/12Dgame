@@ -1,12 +1,14 @@
 from sprites import *
-
+from camera import *
 ## initialize pg and create window
 pg.init()
 pg.mixer.init()  ## For sound (maybe later)
 pg.display.set_caption("<Your game>")
 clock = pg.time.Clock()     ## For syncing the FPS
 
-player1 = Player(100, 100)
+cam = Camera(0, 0)
+
+player1 = Player(100, 100, 40, 100)
 
 ## Game loop
 running = True
@@ -26,11 +28,13 @@ while running:
 
     #2 Update
     player1.update()
-
+    
+    
+    cam.centerObj(player1)
     #3 Draw/render
     screen.fill(BLACK)
     
-    player1.draw()
+    player1.draw(cam)
 
     ## Done after drawing everything to the screen
     pg.display.flip()       
