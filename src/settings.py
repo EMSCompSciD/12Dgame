@@ -4,7 +4,7 @@ WIDTH = 600
 HEIGHT = 480
 FPS = 30
 
-# Define Colors 
+# Define Colors for testing purposes - we can add sprites later
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)

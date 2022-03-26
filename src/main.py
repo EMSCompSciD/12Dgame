@@ -29,11 +29,12 @@ while running:
     #2 Update
     player1.update()
     
-    
+    #run at the end of update to ensure the camera is centered on the correct object
     cam.centerObj(player1)
+
+    
     #3 Draw/render
     screen.fill(BLACK)
-    
     player1.draw(cam)
 
     ## Done after drawing everything to the screen
