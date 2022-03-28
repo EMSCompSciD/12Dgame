@@ -1,4 +1,3 @@
-from abc import abstractmethod
 from settings import *
 
 # A game object class that all objects should inherit from.
@@ -11,8 +10,8 @@ class GameObject():
         self.drawObj()
         self.x += camera.x
         self.y +=camera.y
-    # this means all child classess need the method drawObj() so we can use the draw method
-    @abstractmethod
+        
+    # all child classess need the method drawObj() so we can use the draw method
     def drawObj(self):
         pass
         
@@ -26,7 +25,7 @@ class Player(GameObject):
     def update(self):
         self.x += 1
     # this is the method that all child classes of Game object need. It is designed to allow us to use the camera
-    # class well.
+    # system.
     def drawObj(self):
         pg.draw.rect(screen, BLUE, pg.Rect(self.x, self.y, self.width, self.height))
         
