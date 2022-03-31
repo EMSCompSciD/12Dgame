@@ -13,7 +13,7 @@ class GameObject():
         
     # all child classess need the method drawObj() so we can use the draw method
     def drawObj(self):
-        pass
+        print(f"please override this method for the class: {self}")
         
 
 class Player(GameObject):
@@ -28,4 +28,7 @@ class Player(GameObject):
     # system.
     def drawObj(self):
         pg.draw.rect(screen, BLUE, pg.Rect(self.x, self.y, self.width, self.height))
+        
+    def __str__():
+        return "Player"
         
