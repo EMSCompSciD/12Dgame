@@ -7,7 +7,6 @@ class Camera():
     def centerObj(self, obj):
         self.x = obj.x-WIDTH//2
         self.y = obj.y-HEIGHT//2
-        
     def centerPos(self, x, y):
         self.x = x-WIDTH//2
         self.y = y-HEIGHT//2

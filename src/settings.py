@@ -1,7 +1,11 @@
 import pygame as pg
+import ctypes
 
-WIDTH = 600
-HEIGHT = 480
+user32 = ctypes.windll.user32
+
+WIDTH = user32.GetSystemMetrics(0) # window width
+HEIGHT = user32.GetSystemMetrics(1) # window height
+
 FPS = 30
 
 # Define Colors for testing purposes - we can add sprites later
